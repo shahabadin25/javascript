@@ -46,24 +46,83 @@
 // console.log(JsUser.greetings2());
 
 
+//*****************OBJECTS part 2*********************************************** */
+const tinderUser1=new Object() //singleton object
+console.log(tinderUser1);
 
+const tinderUser={};//non singleton object
+tinderUser.id="123abc";
+tinderUser.name="sammy";
+tinderUser.ifLoggedIn=false;
 
-//****************OBJECTS part 2****************************** */
-
-const course={
-    coursename:"js in hindi",
-    price:"999",
-    courseInstructor:"hitesh"
+const regularUser={
+    email:"some@gmail.com",
+    fullname:{
+        userfullname:{
+            firstname:"adin",
+            lastname:"shahab"
+        }
+    }
 }
-//course.courseInstructor
+
+//console.log(regularUser.fullname?.userfullname.firstname);
+//? infront of full name is given so that there is a check if there exists a full name or not 
+//console.log(tinderUser1);
+
+const obj1={1:"a", 2:"b"};
+const obj2={3:"a", 4:"b"};
+
+//const obj3={obj1,obj2};
+const obj3=Object.assign(obj1,obj2);//joins two objects
+//obj1 is target and obj2 is the source
+const obj4=Object.assign({},obj1,obj2);//joins two objects
+//{} is target and obj1 and obj2 is the source
+//both does the same 
+
+const obj6={...obj1,...obj2}//using spread operator 
+console.log(obj3);
+// const users={
+    
+//         {...
+        
+//         },
+//         {...},
+//         {
+//             ...
+//         }
+    
+// }
+// users[1].email
+console.log(tinderUser);
+console.log(Object.keys(tinderUser));
+console.log(Object.values(tinderUser));
+console.log(Object.entries(tinderUser));
+
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+//enquires whether the object has this property or not
 
 
-//datatype {what value to extract } =from where to extract
-const {courseInstructor :instructor}=course;
-//we can also change the name of the varible of to something 
-//else like course instructor can be accessed using instructor
-//this is known as destructuring.
-console.log(courseInstructor);
+
+
+
+
+
+//****************OBJECTS part 3****************************** */
+
+// const course={
+//     coursename:"js in hindi",
+//     price:"999",
+//     courseInstructor:"hitesh"
+// }
+// //course.courseInstructor
+
+
+// //datatype {what value to extract } =from where to extract
+// const {courseInstructor :instructor}=course;
+// //we can also change the name of the varible of to something 
+// //else like course instructor can be accessed using instructor
+// //this is known as destructuring.
+// console.log(courseInstructor);
 
 //API are just values from backend which does not 
 // {
