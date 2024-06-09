@@ -1,0 +1,10 @@
+blocking code 
+blocks the flow or execution of the program
+reads file synchronously
+
+
+non blocking code
+does not block execution
+read file asynchronously
+
+
